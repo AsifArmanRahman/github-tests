@@ -43,3 +43,4 @@ jobs:
                     pytest
                 env: 
                     FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
+                    FIREBASE_API_SECRET: ${{ secrets.FIREBASE_API_SECRET }}
