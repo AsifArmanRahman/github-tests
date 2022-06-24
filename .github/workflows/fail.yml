@@ -1,0 +1,43 @@
+name: Tests
+
+# Controls when the workflow will run
+on:
+    workflow_run:
+        workflows: [ "Python package" ]
+        branches: [ "main" ]
+        types:
+            - completed
+
+            # Allows you to run this workflow manually from the Actions tab
+    workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+
+    # This workflow contains a single job called "build"
+    tests:
+
+        # The type of runner that the job will run on
+        runs-on: ubuntu-latest
+
+        # Steps represent a sequence of tasks that will be executed as part of the job
+        steps:
+
+            # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+            -   uses: actions/checkout@v3
+
+            -   name: Set up Python 3.9
+                uses: actions/setup-python@v3
+                with:
+                    python-version: 3.9
+
+            -   name: Fail Event
+                run: |
+                    exit 1
+
+            -   name: Pytest
+                run: |
+                    pytest
+                env:
+                    FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
+                    FIREBASE_API_SECRET: ${{ secrets.FIREBASE_API_SECRET }}
