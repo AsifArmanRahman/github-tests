@@ -3,7 +3,7 @@ name: Tests
 # Controls when the workflow will run
 on:
     workflow_run:
-        workflows: [ "Python package" ]
+        workflows: [ "Fail" ]
         branches: [ "main" ]
         types:
             - completed
