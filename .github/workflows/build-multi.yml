@@ -1,4 +1,4 @@
-name: Python package
+name: Python package MUlti
 
 # Controls when the workflow will run
 on:
@@ -24,6 +24,8 @@ jobs:
         strategy:
             matrix:
                 os: [ macos-latest, ubuntu-latest, windows-latest ]
+                python-version: [ "3.6", "3.7", "3.8", "3.9", "3.10" ]
+
 
         # Steps represent a sequence of tasks that will be executed as part of the job
         steps:
@@ -31,10 +33,10 @@ jobs:
             # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
             -   uses: actions/checkout@v3
 
-            -   name: Set up Python 3.9
+            -   name: Set up Python ${{ matrix.python-version }}
                 uses: actions/setup-python@v3
                 with:
-                    python-version: 3.9
+                    python-version: ${{ matrix.python-version }}
 
             -   name: Install dependencies
                 run: |
