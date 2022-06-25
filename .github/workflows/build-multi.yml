@@ -46,3 +46,6 @@ jobs:
             -   name: Test With Tox
                 run: |
                     tox
+                env:
+                    FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
+                    FIREBASE_API_SECRET: ${{ secrets.FIREBASE_API_SECRET }}
