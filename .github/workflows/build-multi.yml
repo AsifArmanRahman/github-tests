@@ -1,4 +1,7 @@
 name: Python package MUlti
+branding:
+    icon: tool
+    color: gray-dark
 
 # Controls when the workflow will run
 on:
