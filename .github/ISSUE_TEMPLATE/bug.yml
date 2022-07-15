@@ -37,7 +37,7 @@ body:
             label: Expected Behavior
             description: A concise description of what you expected to happen.
         validations:
-        required: false
+            required: false
 
     -   type: textarea
         attributes:
