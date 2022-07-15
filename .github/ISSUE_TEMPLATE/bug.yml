@@ -1,6 +1,6 @@
 name: 🪲 Bug
 description: Report an issue to help improve the project.
-title: "[Bug]: "
+title: "[Bug]: <title>"
 labels: ['bug', 'triage']
 
 body:
@@ -10,11 +10,16 @@ body:
             value: |
                 Thanks for stopping by to let us know something could be better!
 
-    -   type: checkboxes
+    -   type: markdown
         attributes:
             label: Is there an existing issue for this?
-            description: |
-                Please search here: https://github.com/AsifArmanRahman/firebase-rest-api/issues to see if an issue already exists for the bug you encountered.
+            value: |
+                Please run down the following list and make sure you've tried the usual "quick fixes":
+
+                -   https://github.com/AsifArmanRahman/firebase-rest-api/issues
+
+    -   type: checkboxes
+        attributes:
             options:
                 -   label: I have searched the existing issues
                     required: true
