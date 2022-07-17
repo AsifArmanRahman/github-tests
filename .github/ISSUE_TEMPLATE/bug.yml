@@ -27,8 +27,7 @@ body:
         id: issue-persists
         attributes:
             value: |                
-                ---
-                # If you are still having issues, please be sure to include as much information as possible:
+                ## If you are still having issues, please be sure to include as much information as possible:
 
     -   type: textarea
         id: environment
