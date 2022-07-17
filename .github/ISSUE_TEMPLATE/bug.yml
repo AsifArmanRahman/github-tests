@@ -26,7 +26,8 @@ body:
     -   type: markdown
         id: issue-persists
         attributes:
-            value: |                
+            value: |
+                <br>
                 ## If you are still having issues, please be sure to include as much information as possible:
 
     -   type: textarea
@@ -58,7 +59,7 @@ body:
     -   type: textarea
         id: code-snippet
         attributes:
-            label: Code Snippet To Reproduce
+            label: Code Snippet
             description: |
                 Please provide the code snippet to reproduce bug.
 
