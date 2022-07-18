@@ -8,6 +8,9 @@
 """Simple Package for Multiple Works and Tests"""
 
 
+__version__ = '2.0.0.dev1'
+
+
 def say_hello(name=None):
     """ Say hello to a person.
 
