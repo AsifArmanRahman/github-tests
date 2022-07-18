@@ -33,9 +33,9 @@ jobs:
                     repo-token: ${{ secrets.GITHUB_TOKEN }}
 
                     issue-message: |
-                        Hello $GITHUB_ACTOR , thank you for submitting an issue!
+                        Hello @${{ github.actor }} , thank you for submitting an issue!
                         A project committer will shortly review the issue.
 
                     pr-message: |
-                        Thank you $GITHUB_ACTOR , for contributing to this project, your support is 
+                        Thank you @${{ github.actor }} , for contributing to this project, your support is 
                         much appreciated. A project committer will shortly review your contribution.
