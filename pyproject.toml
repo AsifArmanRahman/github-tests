@@ -14,6 +14,9 @@ build-backend = 'flit_core.buildapi'
 # Define the library name, this is what is used along with `pip install`.
 name = 'simple-package-AsifArmanRahman'
 
+# Define the version of this library.
+version = '2.0.0'
+
 
 # I have a long description but that will just be my README
 # file of `markdown` type
@@ -58,9 +61,6 @@ classifiers = [
 	'Topic :: Software Development :: Libraries :: Python Modules',
 ]
 dynamic = [
-	# Define the version of this library.
-	'version',
-
     # Here is a small description of the library. This appears
     # when someone searches for the library on https://pypi.org/search.
     'description',

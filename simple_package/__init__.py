@@ -8,9 +8,6 @@
 """Simple Package for Multiple Works and Tests"""
 
 
-__version__ = '2.0.0.dev2'
-
-
 def who_are_you(name=None):
     """ Replies who the person is.
 
