@@ -1,3 +1,12 @@
+## [2.0.2](https://github.com/AsifArmanRahman/github-tests/compare/v2.0.1...v2.0.2) (2022-07-19)
+
+
+### Bug Fixes
+
+* change release committer ([b7067b8](https://github.com/AsifArmanRahman/github-tests/commit/b7067b8586568690c0f6fbb88d5f224366bf11f8))
+
+
+
 ## [2.0.1](https://github.com/AsifArmanRahman/github-tests/compare/v0.1.0...v2.0.1) (2022-07-19)
 
 
