@@ -27,6 +27,7 @@ jobs:
                     github-token: ${{ secrets.CHANGELOG_RELEASE }}
                     git-message: 'release: {version}'
                     version-file: ./pyproject.toml
+                    version-path: project.version
                     release-count: 0
 
             -   name: create release
