@@ -25,6 +25,8 @@ jobs:
                 uses: TriPSs/conventional-changelog-action@v3.7.1
                 with:
                     github-token: ${{ secrets.CHANGELOG_RELEASE }}
+                    git-user-name: Google GitHub Actions Bot
+                    git-user-email: 72759630+google-github-actions-bot@users.noreply.github.com
                     git-message: 'release: {version}'
                     version-file: ./pyproject.toml
                     version-path: project.version
