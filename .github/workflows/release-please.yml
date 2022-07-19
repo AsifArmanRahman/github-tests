@@ -22,5 +22,5 @@ jobs:
                     command: github-release
                     release-type: python
                     package-name: simple_package
+                    version-file: ./pyproject.toml
                     changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Bug Fixes","hidden":false}]'
-                    version-file: simple_package/__init__.py
