@@ -11,6 +11,22 @@
 __version__ = '2.0.0.dev2'
 
 
+def who_are_you(name=None):
+    """ Replies who the person is.
+
+    :type name: str, 
+    :param name: (Optional) Name of a person, defaults to :data:`None`.
+
+    :return: Person telling his name.
+    :rtype: str
+    """
+
+    if name is None:
+        name = 'Python'
+
+    return f"I am {name}"
+
+
 def say_hello(name=None):
     """ Say hello to a person.
 
@@ -22,6 +38,6 @@ def say_hello(name=None):
     """
 
     if name is None:
-        name = 'Python'
+        name = 'World'
 
-    return f"I am {name}"
+    return f"Hello, {name}"
