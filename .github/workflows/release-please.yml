@@ -8,19 +8,33 @@ on:
         types:
             - completed
 
+
 jobs:
 
-    release-please:
+    changelog:
         runs-on: ubuntu-latest
 
-        if: ${{ github.event.workflow_run.conclusion == 'success' }}
+        environment:
+            name: Staging
 
         steps:
+            -   uses: actions/checkout@v2
 
-            -   uses: google-github-actions/release-please-action@v3
+            -   name: conventional Changelog Action
+                id: changelog
+                uses: TriPSs/conventional-changelog-action@v3.7.1
                 with:
-                    command: github-release
-                    release-type: python
-                    package-name: simple_package
+                    github-token: ${{ secrets.CHANGELOG_RELEASE }}
+                    git-message: 'release: {version}'
                     version-file: ./pyproject.toml
-                    changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Bug Fixes","hidden":false}]'
+                    release-count: 0
+
+            -   name: create release
+                uses: actions/create-release@v1
+                if: ${{ steps.changelog.outputs.skipped == 'false' }}
+                env:
+                    GITHUB_TOKEN: ${{ secrets.CHANGELOG_RELEASE }}
+                with:
+                    tag_name: ${{ steps.changelog.outputs.tag }}
+                    release_name: ${{ steps.changelog.outputs.tag }}
+                    body: ${{ steps.changelog.outputs.clean_changelog }}
