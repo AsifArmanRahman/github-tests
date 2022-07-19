@@ -1,0 +1,26 @@
+name: release
+
+# Controls when the workflow will run
+on:
+    workflow_run:
+        workflows: [ "tests" ]
+        branches: [ "main" ]
+        types:
+            - completed
+
+jobs:
+
+    release-please:
+        runs-on: ubuntu-latest
+
+        if: ${{ github.event.workflow_run.conclusion == 'success' }}
+
+        steps:
+
+            -   uses: google-github-actions/release-please-action@v3
+                with:
+                    command: github-release
+                    release-type: python
+                    package-name: simple_package
+                    changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Bug Fixes","hidden":false}]'
+                    version-file: simple_package/__init__.py
