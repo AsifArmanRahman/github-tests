@@ -10,7 +10,7 @@
 
 import pytest
 
-from simple_package import say_hello, who_are_you
+from simple_package import say_hello, who_are_you, say_goodbye
 
 
 @pytest.mark.parametrize("test_input, expected_output",
@@ -33,3 +33,14 @@ def test_who_are_you(test_input, expected_output):
                         )
 def test_say_hello(test_input, expected_output):
     assert say_hello(test_input) == expected_output
+
+
+@pytest.mark.parametrize("test_input, expected_output",
+                            [
+                                (None, 'Goodbye, World'),
+                                ('Asif', 'Goodbye, Asif'),
+                                ('Iron Man', 'Goodbye, Iron Man'),
+                            ]
+                        )
+def test_say_goodbye(test_input, expected_output):
+    assert say_goodbye(test_input) == expected_output

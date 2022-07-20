@@ -38,3 +38,19 @@ def say_hello(name=None):
         name = 'World'
 
     return f"Hello, {name}"
+
+
+def say_goodbye(name=None):
+    """ Say goodbye to a person.
+
+    :type name: str, 
+    :param name: (Optional) Name of a person, defaults to :data:`None`.
+
+    :return: Greets the person goodbye.
+    :rtype: str
+    """
+
+    if name is None:
+        name = 'World'
+
+    return f"Goodbye, {name}"
