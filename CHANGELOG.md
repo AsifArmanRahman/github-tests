@@ -1,3 +1,12 @@
+# [2.1.0](https://github.com/AsifArmanRahman/github-tests/compare/v2.0.2...v2.1.0) (2022-07-20)
+
+
+### Features
+
+* add say_goodbye ([#5](https://github.com/AsifArmanRahman/github-tests/issues/5)) ([4b724cf](https://github.com/AsifArmanRahman/github-tests/commit/4b724cf05cfa90b260d886cdaca2f09528ab627d))
+
+
+
 ## [2.0.2](https://github.com/AsifArmanRahman/github-tests/compare/v2.0.1...v2.0.2) (2022-07-19)
 
 
