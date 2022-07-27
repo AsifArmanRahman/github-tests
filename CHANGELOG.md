@@ -1,3 +1,12 @@
+## [2.1.3](https://github.com/AsifArmanRahman/github-tests/compare/v2.1.2...v2.1.3) (2022-07-27)
+
+
+### Bug Fixes
+
+* email show up ([3e2a1a2](https://github.com/AsifArmanRahman/github-tests/commit/3e2a1a2478cc5c3248ad4ecbe17a2893cc4f5e27))
+
+
+
 ## [2.1.2](https://github.com/AsifArmanRahman/github-tests/compare/v2.1.1...v2.1.2) (2022-07-27)
 
 
