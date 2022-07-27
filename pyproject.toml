@@ -24,8 +24,7 @@ classifiers = [
 dynamic = [ "description" ]
 
   [[project.authors]]
-  name = "Asif Arman Rahman"
-  email = "AsifArmanRahman@gmail.com"
+  name = "Asif Arman Rahman <asifarmanrahman@gmail.com>"
 
   [project.optional-dependencies]
   test = [ "pytest>=7.1.2", "pytest-cov>=3.0.0" ]
