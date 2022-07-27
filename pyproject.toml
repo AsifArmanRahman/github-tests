@@ -6,6 +6,9 @@ build-backend = "flit_core.buildapi"
 name = "simple-package-AsifArmanRahman"
 version = "2.1.2"
 readme = "README.md"
+authors = [
+    {name = "Asif Arman Rahman", email = "asifarmanrahman@gmail.com"},
+]
 requires-python = ">=3.6"
 keywords = [ "Simple" ]
 classifiers = [
@@ -21,11 +24,7 @@ classifiers = [
   "Programming Language :: Python :: 3.10",
   "Topic :: Software Development :: Libraries :: Python Modules"
 ]
-dynamic = [ "description" ]
-
-  [[project.authors]]
-  name = "Asif Arman Rahman"
-  email = "<asifarmanrahman@gmail.com>"
+dynamic = [ "description" ]  
 
   [project.optional-dependencies]
   test = [ "pytest>=7.1.2", "pytest-cov>=3.0.0" ]
